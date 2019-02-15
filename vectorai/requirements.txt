@@ -1,0 +1,7 @@
+Django
+django-cors-headers
+PyPDF2
+pytz
+uWSGI
+Wand
+boto3

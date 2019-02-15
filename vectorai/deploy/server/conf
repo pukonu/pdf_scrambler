@@ -1,0 +1,23 @@
+server {
+    listen 80;
+    listen 8880;
+    ssl on;
+
+    server_name vector.postprincipal.com;
+
+    location /media/ { # MEDIA_URL
+        alias /home/pukonu/vectorai/api/media/; # MEDIA_ROOT
+        expires 30d;
+    }
+
+    location /api/ {
+        uwsgi_pass 127.0.0.1:9140;
+        include uwsgi_params;
+    }
+
+    location / {
+        index index.html;
+        root /home/pukonu/vectorai/frontend/build;
+        try_files $uri $uri/ /index.html;
+    }
+}

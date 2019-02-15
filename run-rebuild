@@ -1,0 +1,11 @@
+# forcefully remove all previous running or standby containers
+docker rm --force $(docker ps -aq)
+
+# rebuild the image
+docker build -t pukonu/vectorai .
+
+# start container for the specified image
+docker run -d -p 9000:80 pukonu/vectorai
+
+# delete all images with no name
+# docker image rm $(docker images | grep none | awk '{print $3}')
