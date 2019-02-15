@@ -59,12 +59,7 @@ def rearrange(request):
     arrangements = r["arrangement"]
     folder_name = r["folderName"]
 
-    debug_logger(arrangements)
-    debug_logger(folder_name)
-
     main_document = PdfFileReader(open("%s/%s/_main.pdf" % (settings.BASE_DIR, folder_name), 'rb'))
-
-    debug_logger(main_document)
 
     # initialize the document labels
     document_labels = ["alpha", "beta", "gamma"]
