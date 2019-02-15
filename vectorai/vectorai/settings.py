@@ -14,9 +14,9 @@ import os
 
 HTTP_SCHEME = "http"
 
-SERVER_NAME = "127.0.0.1"
+SERVER_NAME = "vectorai.postprincipal.com"
 
-SERVER_PORT = 9000
+SERVER_PORT = 9141
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
